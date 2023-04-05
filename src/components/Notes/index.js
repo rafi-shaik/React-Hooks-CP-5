@@ -33,9 +33,9 @@ const Notes = () => {
   const onSubmitForm = event => {
     event.preventDefault()
     const newNote = {id: uuidv4(), title, notesText}
+    setNotes(prev => [...prev, newNote])
     setTitle('')
     setNotesText('')
-    setNotes(prev => [...prev, newNote])
   }
 
   return (
